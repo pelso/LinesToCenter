@@ -1,1 +1,1 @@
-# LinesToCenter
+Drawing lines to the centre of the canvas with javascript.

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="lineToCenter">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width"> 
+  <title>JS Bin</title>
+</head>
+<body>
+ <canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+ <p id="demo"></p>
+
+<script>
+	
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+var canvasWidth = 450;
+var canvasHeight = 300;
+var color = 'red';
+
+
+function lineToCenter(x,y,color){
+  context.beginPath();
+  context.moveTo(canvasWidth/2, canvasHeight/2);
+  context.lineTo(x,y);
+  context.strokeStyle = color;
+  context.stroke();
+}
+
+for (var i = 0; i < 100; i++) {
+  var x = Math.random() * canvasWidth;
+  var y = Math.random() * canvasHeight;
+  lineToCenter(x,y,color);
+}
+
+</script>
+	
+</body>
+</html>
